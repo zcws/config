@@ -66,6 +66,6 @@ export class NacosService extends Events.EventEmitter {
 
   private setConfig(content: string) {
     this.#config = parse(content);
-    this.#logger.info("加载配置", content);
+    this.#logger.debug("加载配置", content);
   }
 }
