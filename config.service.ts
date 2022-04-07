@@ -6,7 +6,7 @@ export class ConfigService {
   constructor(private readonly nacos: NacosService) {
   }
 
-  async get<T>(key: string): Promise<T> {
+  async get<T>(key?: string): Promise<T> {
     return this.nacos.get<T>(key);
   }
 }
