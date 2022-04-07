@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/zcws/config/compare/v0.2.1...v0.2.2) (2022-04-07)
+
+
+### Bug Fixes
+
+* 修复无法获取false值的问题。 ([07cfe3c](https://github.com/zcws/config/commit/07cfe3caeeba543550c852b9d10b3e297ef5d39b))
+
 ### [0.2.1](https://github.com/zcws/config/compare/v0.1.1...v0.2.1) (2022-04-07)
 
 
