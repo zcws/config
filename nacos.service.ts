@@ -49,7 +49,7 @@ export class NacosService extends Events.EventEmitter {
       return this.#config[key];
     }
 
-    throw new Error("获取参数失败");
+    throw new Error(`获取参数失败:${key}`);
   }
 
   /**
