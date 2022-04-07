@@ -27,7 +27,7 @@ export class NacosService extends Events.EventEmitter {
     this.loadConfig().catch(err => this.#logger.error(err));
   }
 
-  async get<T>(key: string): Promise<T> {
+  async get<T>(key?: string): Promise<T> {
     if (this.#isReady) {
       return this.getConfig<T>(key);
     } else {
@@ -44,12 +44,16 @@ export class NacosService extends Events.EventEmitter {
     }
   }
 
-  private getConfig<T>(key: string): T {
-    if (this.#config && this.#config[key]) {
-      return this.#config[key];
-    }
+  private getConfig<T>(key?: string): T {
+    if (key) {
+      if (this.#config && this.#config[key]) {
+        return this.#config[key];
+      }
 
-    throw new Error(`获取参数失败:${key}`);
+      throw new Error(`获取参数失败:${key}`);
+    } else {
+      return this.#config;
+    }
   }
 
   /**
