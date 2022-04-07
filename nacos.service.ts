@@ -46,7 +46,7 @@ export class NacosService extends Events.EventEmitter {
 
   private getConfig<T>(key?: string): T {
     if (key) {
-      if (this.#config && this.#config[key]) {
+      if (this.#config.hasOwnProperty(key)) {
         return this.#config[key];
       }
 
